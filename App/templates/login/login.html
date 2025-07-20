@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% load static %}
+{% block body_class %}login-page{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/form.css' %}">
+<div class="login-wrapper">
+    <div class="login-container">
+        <!-- Logo/Cabecera romántica -->
+        <div class="login-header">
+            <h1 class="dancing-script">Para Mi Amor</h1>
+            <p class="slogan">Inicia sesion para entrar a nuestro mundo</p>
+            {% if error %}
+            <div class="login-error">
+                <i class="bi bi-heartbreak"></i> {{ error }}
+            </div>
+            {% endif %}
+        </div>
+        <form class="formulario" action="" id="formulario" method="post">
+            {% csrf_token %}
+            <!-- Grupo Usuario -->
+            <div class="formulario_grupo" id="grupo_usuario">
+                <div class="input-with-icon">
+                    <i class="bi bi-person-fill"></i>
+                    <input type="text" class="formulario_input" name="usuario" id="usuario"
+                        placeholder="Tu nombre especial">
+                </div>
+                <p class="formulario_input-error">Solo letras, números y _ (3-16 caracteres)</p>
+            </div>
+            <!-- Grupo Contraseña -->
+            <div class="formulario_grupo" id="grupo_password">
+                <div class="input-with-icon">
+                    <i class="bi bi-lock-fill"></i>
+                    <input type="password" class="formulario_input" name="password" id="password"
+                        placeholder="Nuestro código secreto">
+                </div>
+                <p class="formulario_input-error">4-12 caracteres</p>
+            </div>
+            <!-- Grupo Términos -->
+            <div class="formulario_grupo" id="grupo_terminos">
+                <label class="formulario_label checkbox-label">
+                    <input class="formulario_checkbox" type="checkbox" name="terminos" id="terminos">
+                    <span>Acepto compartir mi corazón</span>
+                </label>
+            </div>
+
+            <!-- Mensajes de validación -->
+            <div class="formulario_mensaje" id="formulario_mensaje">
+                <p><i class="bi bi-exclamation-triangle-fill"></i> <b>Error:</b> Completa todos los campos</p>
+            </div>
+            <!-- Botón de envío -->
+            <div class="formulario_grupo formulario_grupo-btn-enviar">
+                <button type="submit" class="btn-login">
+                    <i class="bi bi-heart-fill"></i> Entrar
+                </button>
+                <p class="formulario_mensaje-exito" id="formulario_mensaje-exito">¡Bienvenido a nuestro mundo!</p>
+            </div>
+        </form>
+    </div>
+    <!-- Corazones animados - ahora con 10 corazones -->
+<div class="hearts-animation">
+    <div class="heart">❤️</div>
+    <div class="heart">💖</div>
+    <div class="heart">💕</div>
+    <div class="heart">❤️</div>
+    <div class="heart">💖</div>
+    <div class="heart">💕</div>
+    <div class="heart">❤️</div>
+    <div class="heart">💖</div>
+    <div class="heart">❤️</div>
+    <div class="heart">💕</div>
+    <div class="heart">💕</div>
+    <div class="heart">❤️</div>
+    <div class="heart">💖</div>
+    <div class="heart">💖</div>
+    <div class="heart">❤️</div>
+    <div class="heart">💖</div>
+    <div class="heart">❤️</div>
+    <div class="heart">💖</div>
+    <div class="heart">❤️</div>
+</div>
+</div>
+<script src="{% static 'js/iniciar.js' %}"></script>
+{% endblock %}

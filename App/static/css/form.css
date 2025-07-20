@@ -1,0 +1,233 @@
+/* ===== ESTILOS DE VALIDACIÓN (se mantienen igual) ===== */
+.formulario_input-error {
+    display: none;
+    color: #eb1313;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.formulario_input-error-activo {
+    display: block;
+}
+
+.formulario_mensaje {
+    display: none; 
+    color: #d9534f;
+    background: rgba(217, 83, 79, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    text-align: justify;
+}
+
+.formulario_mensaje-activo {
+    display: block;
+}
+
+.formulario_mensaje-exito {
+    display: none;
+    color: #1ed21d;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.formulario_mensaje-exito-activo {
+    display: block;
+}
+
+/* ===== ESTILOS GENERALES ===== */
+.login-page {
+    background: linear-gradient(135deg, #ffcce6 0%, #ff99cc 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow: hidden; /* Para que los corazones no causen scroll */
+}
+
+.login-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== CABECERA ===== */
+.login-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.dancing-script {
+    font-family: 'Dancing Script', cursive;
+    color: #ff4d88;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.slogan {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+.login-error {
+    color: #d9534f;
+    background: rgba(217, 83, 79, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+/* ===== FORMULARIO ===== */
+.formulario {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.input-with-icon {
+    position: relative;
+}
+
+.input-with-icon i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ff4d88;
+    z-index: 2;
+}
+
+/* INPUTS MÁS ALTOS Y SIN BORDE NEGRO */
+.formulario_input {
+    width: 100%;
+    padding: 5px 5px 5px 40px !important; /* Más alto */
+    height: auto !important; /* Altura automática */
+    min-height: 50px; /* Altura mínima */
+    border: 1px solid #e6e6e6 !important;
+    border-radius: 8px !important;
+    transition: all 0.3s !important;
+    font-size: 1rem;
+    outline: none !important; /* Elimina el borde negro al hacer clic */
+}
+
+.formulario_input:focus {
+    border-color: #ff4d88 !important;
+    box-shadow: 0 0 0 3px rgba(255, 77, 136, 0.2) !important;
+}
+
+/* ===== CHECKBOX PERSONALIZADO ===== */
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkbox-label span {
+    margin-left: 10px;
+    color: #666;
+}
+
+.formulario_checkbox {
+    width: 18px;
+    height: 18px;
+    accent-color: #ff4d88;
+}
+
+/* ===== BOTÓN ===== */
+.btn-login {
+    background: linear-gradient(to right, #ff4d88, #ff6b6b);
+    color: white;
+    border: none;
+    padding: 15px 25px; /* Más alto */
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1rem;
+}
+
+.btn-login:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 77, 136, 0.3);
+}
+
+/* ===== CORAZONES ANIMADOS MEJORADOS ===== */
+.hearts-animation {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.heart {
+    position: absolute;
+    font-size: 24px;
+    opacity: 0;
+    animation: float 8s ease-in-out infinite;
+    z-index: 0;
+}
+
+/* Configuración para 10 corazones (puedes agregar más) */
+.heart:nth-child(1) { left: 2%; animation-delay: 0s; } 
+.heart:nth-child(2) { right: 20%; animation-delay: 0.5s; }
+.heart:nth-child(3) { left: 20%; animation-delay: 1s; }
+.heart:nth-child(4) { left: 55%; animation-delay: 2.9s; } 
+.heart:nth-child(5) { right: 30%; animation-delay: 2s; }
+.heart:nth-child(6) { right: 65%; animation-delay: 3.2s; }
+.heart:nth-child(7) { right: 20%; animation-delay: 4s; }
+.heart:nth-child(8) { left: 70%; animation-delay: 5s; }
+.heart:nth-child(9) { left: 90%; animation-delay: 6s; }
+.heart:nth-child(10) { right: 85%; animation-delay: 7s; }
+.heart:nth-child(11) { left: 40%; animation-delay: 0.2s; }
+.heart:nth-child(12) { left: 40%; animation-delay: 2.5s; } 
+.heart:nth-child(13) { right: 10%; animation-delay: 3.6s; }
+.heart:nth-child(14) { left: 5%; animation-delay: 4.6s; }
+.heart:nth-child(15) { left: 20%; animation-delay: 3.1s; }
+.heart:nth-child(16) { left: 15%; animation-delay: 4.1s; }
+.heart:nth-child(17) { left: 9%; animation-delay: 2.5s; }
+.heart:nth-child(18) { left: 50%; animation-delay: 4.5s; }
+.heart:nth-child(19) { left: 20%; animation-delay: 5.5s; }
+ 
+
+
+
+/* Animación más suave */
+@keyframes float {
+    0% { 
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.7;
+    }
+    90% {
+        opacity: 0.7;
+    }
+    100% { 
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+    }
+}

@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Para mi Amor ❤️</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap-5.3.3-dist\css\bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap-icons-1.11.3/font/bootstrap-icons.css' %}">
+    
+     <!-- Fuentes romanticas -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+  </div>
+</nav>
+</head>
+<body class="{% block body_class %}{% endblock %}">
+    
+    <!-- Galería de Fotos -->
+{% comment %}     <div class="gallery">
+        <img src="{% static 'img/foto1.jpg' %}" alt="Nuestra foto">
+    </div>
+    
+    <!-- Reproductor de Música -->
+    <audio controls class="player">
+        <source src="{% static 'music/cancion.mp3' %}" type="audio/mpeg">
+    </audio>
+
+    <!-- Mensajes -->
+    <div class="messages">
+        <p class="message">"Te extraño cada día más..."</p>
+    </div>
+    <div class="heart">❤️</div> <!-- Animación de corazón -->
+
+    <h1>Para la mujer que ilumina mi universo</h1>
+    <button>Entrar a nustro mundo</button> {% endcomment %}
+
+    {% block content %}{% endblock content %}
+
+    <script src="{% static 'js/animacion.js' %}"></script>
+    <script src="{% static 'bootstrap-5.3.3-dist\js\bootstrap.min.js' %}"></script>
+    <script src="{% static 'bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>

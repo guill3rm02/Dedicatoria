@@ -1,0 +1,79 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #ffeef8 100%);
+}
+
+.dancing-script {
+    font-family: 'Dancing Script', cursive;
+    color: #ff6b81;
+}
+
+/* Login Page */
+.login-page {
+    background: url('{% static "img/background.jpg" %}') no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hearts {
+    position: relative;
+    height: 100px;
+    margin-top: 20px;
+}
+
+.heart {
+    position: absolute;
+    font-size: 24px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Secret Page */
+.secret-page {
+    padding: 2rem;
+}
+
+.gallery-img {
+    border-radius: 15px;
+    transition: transform 0.3s;
+    max-height: 300px;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+
+.message-bubble {
+    background: #ff6b81;
+    color: white;
+    padding: 1rem;
+    border-radius: 20px;
+    margin: 1rem 0;
+    max-width: 70%;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
