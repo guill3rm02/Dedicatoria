@@ -99,7 +99,7 @@ DATABASES = {
 }
 
 ALLOWED_HOSTS = [
-    'https://dedicatoria-cuvr.onrender.com', # Reemplaza con el dominio real de tu app en Render
+    'dedicatoria-cuvr.onrender.com', # Reemplaza con el dominio real de tu app en Render
     'localhost',
     '127.0.0.1',
     # Si tienes un dominio personalizado, añádelo aquí también:
