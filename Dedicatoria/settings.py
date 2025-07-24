@@ -79,13 +79,32 @@ WSGI_APPLICATION = 'Dedicatoria.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 
+#DATABASES = {
+ #   'default': {
+  #      'ENGINE': 'django.db.backends.postgresql',
+   #     'NAME': 'dedicatoria',         # El nombre de la base que creaste
+    #    'USER': 'guille',              # El usuario que creaste
+     #   'PASSWORD': 'Guisyx100pre',    # La contraseña que pusiste
+      #  'HOST': 'localhost',
+       # 'PORT': '5432',
+    #}
+#}
+
 DATABASES = {
     'default': dj_database_url.config(
         # Replace this value with your local database's connection string.
-        default='postgresql://postgres:postgres@localhost/postgres',
+        default=os.environ.get('DATABASE_URL'),
         conn_max_age=600
     )
 }
+
+ALLOWED_HOSTS = [
+    'https://dedicatoria-cuvr.onrender.com', # Reemplaza con el dominio real de tu app en Render
+    'localhost',
+    '127.0.0.1',
+    # Si tienes un dominio personalizado, añádelo aquí también:
+    # 'www.tudominio.com',
+]
 
 
 # Password validation
